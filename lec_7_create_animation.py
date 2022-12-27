@@ -17,6 +17,6 @@ def update(frame): # Функция подстановки координат в
     anim_object.set_data(xdata, ydata) # Передача координат
     return anim_object,
 
-ani = FuncAnimation(fig, update, frames=np.arange(0, 2*np.pi, 0.1), interval=100)
+ani = FuncAnimation(fig, update, frames=np.arange(0,12*np.pi, 0.1), interval=100)
 
 ani.save('kx.gif')

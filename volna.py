@@ -9,7 +9,7 @@ anim_object, = plt.plot([], [], '-', lw=2)
 xdata, ydata = [], []
 
 ax.set_xlim(0, 2*np.pi)
-ax.set_ylim(-1, 1)
+ax.set_ylim(-1, 1) 
  
 def update(frame):
     xdata.append(frame)
@@ -19,10 +19,7 @@ def update(frame):
 
 ani = FuncAnimation(fig, update, frames=np.arange(0,12*np.pi, 0.1), interval=100)
 
-ani.save('поперечная волна.gif')
-
-import matplotlib.pyplot as plt
-import numpy as np
+ani.save('поперечная и продольная волны.gif')
 
 x = [0, 4, 10]
 y = [0, 0, 0]
@@ -33,4 +30,4 @@ plt.ylabel('Coord: y')
 plt.legend()
 plt.title('Продольная и поперечная волны')
 plt.grid()
-plt.savefig('две волны.png')
+plt.savefig('продольная  и поперечная волны.png')

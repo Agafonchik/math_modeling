@@ -35,16 +35,16 @@ def re_move(t):
     y = 13 * np.cos(t) - 5 * np.cos(2 * t) - 2 * np.cos(3 * t) - np.cos(4 * t)
     return x, y
 
-# edge = 3
-# plt.axis('equal')
-# ax.set_xlim(-20, 20)
-# ax.set_ylim(-20, 20)
+edge = 3
+plt.axis('equal')
+ax.set_xlim(-20, 20)
+ax.set_ylim(-20, 20)
 
-# def animate(i):
-#     x.append(re_move(t=1)[0])
-#     y.append(re_move(t=1)[1])
-#     re.set_data(re_move(x, y))
+def animate(i):
+    x.append(re_move(t=1)[0])
+    y.append(re_move(t=1)[1])
+    re.set_data(re_move(x, y))
 
-# ani = FuncAnimation(fig, animate, frames=100, interval=30)
+ani = FuncAnimation(fig, animate, frames=100, interval=30)
 
-# plt.savefig('re.gif')
+plt.savefig('re.gif')
